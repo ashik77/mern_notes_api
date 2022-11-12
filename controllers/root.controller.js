@@ -15,9 +15,9 @@ export const notFound = async (req, res) => {
     if (req.accepts("html")) {
       await res.sendFile(path.join(__dirname, "views", "notFound.html"));
     } else if (req.accepts("json")) {
-      res.json({ message: "404 Not Found" });
+      await res.json({ message: "404 Not Found" });
     } else {
-      res.type("txt").send("404 Not Found");
+      await res.type("txt").send("404 Not Found");
     }
   } catch (err) {
     res.status(500).json(err);

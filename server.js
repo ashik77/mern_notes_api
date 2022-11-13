@@ -5,8 +5,9 @@ import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 
-import rootRoutes from "./routes/root.router.js";
-import userRoutes from "./routes/user.router.js";
+import rootRoutes from "./routes/root.routes.js";
+import userRoutes from "./routes/user.routes.js";
+import noteRoutes from "./routes/note.routes.js";
 import { logger, logEvents } from "./middleware/logger.js";
 import { errorHandler } from "./middleware/errorHandler.js";
 import { corsOptions } from "./config/corsOptions.js";
@@ -35,6 +36,8 @@ app.use("/", express.static(path.join(__dirname, "public")));
 app.use("/", rootRoutes);
 
 app.use("/users", userRoutes);
+
+app.use("/notes", noteRoutes);
 
 app.use(errorHandler);
 

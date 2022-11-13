@@ -5,7 +5,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 import mongoose from "mongoose";
 
-import rootRouter from "./routes/root.router.js";
+import rootRoutes from "./routes/root.router.js";
+import userRoutes from "./routes/user.router.js";
 import { logger, logEvents } from "./middleware/logger.js";
 import { errorHandler } from "./middleware/errorHandler.js";
 import { corsOptions } from "./config/corsOptions.js";
@@ -31,7 +32,9 @@ app.use(cookieParser());
 
 app.use("/", express.static(path.join(__dirname, "public")));
 
-app.use("/", rootRouter);
+app.use("/", rootRoutes);
+
+app.use("/users", userRoutes);
 
 app.use(errorHandler);
 

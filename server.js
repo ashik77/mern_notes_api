@@ -8,6 +8,7 @@ import mongoose from "mongoose";
 import rootRoutes from "./routes/root.routes.js";
 import userRoutes from "./routes/user.routes.js";
 import noteRoutes from "./routes/note.routes.js";
+import authRoutes from "./routes/auth.routes.js";
 import { logger, logEvents } from "./middleware/logger.js";
 import { errorHandler } from "./middleware/errorHandler.js";
 import { corsOptions } from "./config/corsOptions.js";
@@ -34,6 +35,8 @@ app.use(cookieParser());
 app.use("/", express.static(path.join(__dirname, "public")));
 
 app.use("/", rootRoutes);
+
+app.use("/auth", authRoutes);
 
 app.use("/users", userRoutes);
 

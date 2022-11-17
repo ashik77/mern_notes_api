@@ -2,6 +2,20 @@
 
 Live site: https://notes-dd00.onrender.com/
 
+Dummy Password to access:
+
+~Admin:
+
+username: admin
+
+password: 123456
+
+~Employee:
+
+username: test
+
+password: 123456
+
 API endpoint created with mongoDB, node and express.
 
 Functionality:

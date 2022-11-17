@@ -3,10 +3,10 @@ import { getRoot, notFound } from "../controllers/root.controller.js";
 
 const router = express.Router();
 
-//router.get("^/$|/index(.html)?", getRoot);
+router.get("^/$|/index(.html)?", getRoot);
 
-router.get("/", getRoot);
+//router.get("/", getRoot);
 
-//router.all("*", notFound);
+router.all("*", notFound);
 
 export default router;

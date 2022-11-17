@@ -1,7 +1,3 @@
-export const allowedOrigins = [
-  "http://localhost:3000",
-  "https://www.kautorepairshop.com",
-  "https://kautorepairshop.com",
-];
+export const allowedOrigins = ["https://notes-dd00.onrender.com/"];
 
 //who can access out api

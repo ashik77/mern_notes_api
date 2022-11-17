@@ -1,5 +1,7 @@
 # mern_notes
 
+Live site: https://notes-dd00.onrender.com/
+
 API endpoint created with mongoDB, node and express.
 
 Functionality:
